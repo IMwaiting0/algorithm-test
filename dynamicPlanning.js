@@ -14,4 +14,4 @@ function getMinCoinNum(sum, coins){
     return minNumber[sum];
 }
 
-// console.log(getMinCoinNum(10,coins));
+console.log(getMinCoinNum(10,coins));
