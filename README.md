@@ -1,10 +1,16 @@
 # myCodes 算法和测试
+<h3>ArrayFlat.js:数组打平</h3>
 <h3>arrayUnique.js:数组去重</h3>
 <h3>asyncMissions.js:异步任务流程控制</h3>
 <h3>backTrack.js:回溯法</h3>
 <h3>callApplyBind.js:call apply和bind实现</h3>
 <h3>curry.js:函数柯里化</h3>
+<h3>deepCopy.js:深拷贝</h3>
 <h3>dijkstra.js:最短路径法</h3>
 <h3>dynamicPlanning.js:动态规划</h3>
+<h3>eventManager.js:事件管理器</h3>
 <h3>foreachPatch:froEach打包补丁</h3>
+<h3>quickSort.js:快排</h3>
+<h3>stack.js:自定义栈,四则运算</h3>
+<h3>throttle.js:函数节流与防抖</h3>
 
