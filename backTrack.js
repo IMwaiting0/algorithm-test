@@ -1,47 +1,47 @@
-// // 0-1背包问题
-// const ITEMN = 3;
-// const BAGC = 16;//背包容量
-// const WEIGHT = [10,8,5];//每个物品的重量
-// const VALUE = [5,4,1];//每个物品的价值
-// const ITEMX = [0,0,0];//ITEMX[i]=1代表物品放入背包，0代表不放入
+// 0-1背包问题
+const ITEMN = 3;
+const BAGC = 16;//背包容量
+const WEIGHT = [10,8,5];//每个物品的重量
+const VALUE = [5,4,1];//每个物品的价值
+const ITEMX = [0,0,0];//ITEMX[i]=1代表物品放入背包，0代表不放入
 
-// var curWeight = 0;//当前放入背包的物品总重量
-// var curValue = 0;//当前放入背包的物品总价值
+var curWeight = 0;//当前放入背包的物品总重量
+var curValue = 0;//当前放入背包的物品总价值
 
-// var bestValue = 0;//价值最优值
-// var bestX = [];//最优解
+var bestValue = 0;//价值最优值
+var bestX = [];//最优解
 
-// //t = 0 to ITEMN-1
-// function backTrack(t){
-//     if(t>ITEMN-1){
-//         if(curValue>bestValue){
-//             bestValue = curValue;
-//             for(var i=0;i<ITEMN;i++){
-//                 bestX[i]=ITEMX[i];
-//             }
-//         }
-//     }else{
-//         for(var i=0;i<=1;i++){
-//             ITEMX[t]=i;
-//             if(i==0){
-//                 backTrack(t+1);
-//             }
-//             else{
-//                 if(curWeight+WEIGHT[t]<=BAGC){
-//                     curWeight += WEIGHT[t];
-//                     curValue += VALUE[t];
-//                     backTrack(t+1);
-//                     curWeight -= WEIGHT[t];
-//                     curValue -= VALUE[t];
-//                 }
-//             }
-//         }
-//     }
-// }
+//t = 0 to ITEMN-1
+function backTrack(t){
+    if(t>ITEMN-1){
+        if(curValue>bestValue){
+            bestValue = curValue;
+            for(var i=0;i<ITEMN;i++){
+                bestX[i]=ITEMX[i];
+            }
+        }
+    }else{
+        for(var i=0;i<=1;i++){
+            ITEMX[t]=i;
+            if(i==0){
+                backTrack(t+1);
+            }
+            else{
+                if(curWeight+WEIGHT[t]<=BAGC){
+                    curWeight += WEIGHT[t];
+                    curValue += VALUE[t];
+                    backTrack(t+1);
+                    curWeight -= WEIGHT[t];
+                    curValue -= VALUE[t];
+                }
+            }
+        }
+    }
+}
 
-// backTrack(0);
-// console.log(bestValue,JSON.stringify(bestX));
-//以上是背包问题
+backTrack(0);
+console.log(bestValue,JSON.stringify(bestX));
+// 以上是背包问题
 
 
 // //旅行售货员问题
